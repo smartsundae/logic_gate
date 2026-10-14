@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 게이트 퀴즈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>논리 게이트 퀴즈</h1>
+        <p class="subtitle">난이도를 골라주세요</p>
+        <div class="menu-container">
+            <div class="menu-btn" onclick="startGame('easy')">EASY</div>
+            <div class="menu-btn" onclick="startGame('medium')">MEDIUM</div>
+            <div class="menu-btn" onclick="startGame('hard')">HARD</div>
+        </div>
+        <p class="subtitle">동인천고등학교</p>
+    </div>
+
+    <!-- 게임 진행 화면 -->
+    <div id="game-container" style="display: none;">
+        <header>
+            <div class="title" id="current-difficulty-title">논리 게이트 퀴즈</div>
+            <div id="stage-info">스테이지 1 / 3</div>
+        </header>
+
+        <div class="circuit-view">
+            <svg id="circuit-svg" width="550" height="280"></svg>
+        </div>
+
+        <div class="info-section">
+            <div id="expression"></div>
+            <div id="question-text"></div>
+        </div>
+
+        <div class="input-section" id="input-section">
+            <label id="input-label" for="answer-input"></label>
+            <input type="text" id="answer-input" maxlength="1" autocomplete="off">
+            <button id="submit-btn" onclick="submitAnswer()">제출</button>
+        </div>
+
+        <div id="feedback-msg"></div>
+
+        <div id="clear-screen" style="display: none;">
+            <h2 id="clear-title">난이도 클리어!</h2>
+            <p>논리 시퀀스 완료</p>
+            <button onclick="returnToMenu()">메인 메뉴</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
