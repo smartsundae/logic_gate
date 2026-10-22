@@ -20,35 +20,6 @@ const levels = {
             ],
             labels: [{ text: "A = 1", x: 0, y: 45 }, { text: "B = 0", x: 0, y: 85 }, { text: "C = 1", x: 0, y: 145 }, { text: "F = [?]", x: 360, y: 100 }]
         },
-        {
-            stage: 2,
-            expression: "(A OR B) XOR C",
-            question: "최종 Output F가 1이 되기 위해 필요한 Input C의 값은?",
-            targetLabel: "C",
-            answer: "1",
-            gates: [{ id: "G1", type: "OR", x: 150, y: 30 }, { id: "G2", type: "XOR", x: 250, y: 75 }],
-            wires: [
-                "M 50 40 L 150 40", "M 50 80 L 100 80 L 100 60 L 150 60",
-                "M 190 50 L 220 50 L 220 85 L 258 85", "M 50 140 L 220 140 L 220 105 L 258 105",
-                "M 306 95 L 350 95"
-            ],
-            labels: [{ text: "A = 0", x: 0, y: 45 }, { text: "B = 0", x: 0, y: 85 }, { text: "C = [?]", x: 0, y: 145 }, { text: "F = 1", x: 360, y: 100 }]
-        },
-        {
-            stage: 3,
-            expression: "(A AND B) AND (C OR D)",
-            question: "주어진 Input값으로 최종 Output F를 구하시오.",
-            targetLabel: "F",
-            answer: "0",
-            gates: [{ id: "G1", type: "AND", x: 150, y: 20 }, { id: "G2", type: "OR", x: 150, y: 120 }, { id: "G3", type: "AND", x: 270, y: 70 }],
-            wires: [
-                "M 50 30 L 150 30", "M 50 70 L 100 70 L 100 50 L 150 50",
-                "M 50 130 L 150 130", "M 50 170 L 100 170 L 100 150 L 150 150",
-                "M 190 40 L 235 40 L 235 80 L 270 80", "M 190 140 L 235 140 L 235 100 L 270 100",
-                "M 310 90 L 370 90"
-            ],
-            labels: [{ text: "A = 1", x: 0, y: 35 }, { text: "B = 1", x: 0, y: 75 }, { text: "C = 0", x: 0, y: 135 }, { text: "D = 0", x: 0, y: 175 }, { text: "F = [?]", x: 380, y: 95 }]
-        }
     ],
     medium: [
         {
