@@ -258,7 +258,7 @@ function renderStage() {
 
     const data = stageData[currentStageIndex];
     
-    document.getElementById('stage-info').innerText = `STAGE ${data.stage} / 3`;
+    document.getElementById('stage-info').innerText = `STAGE ${data.stage} / ${stageData.length}`;
     document.getElementById('expression').innerText = data.expression;
     document.getElementById('question-text').innerText = data.question;
     document.getElementById('input-label').innerText = `${data.targetLabel} = `;
